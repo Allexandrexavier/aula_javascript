@@ -3,18 +3,270 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>minha pagina</title>
-    <script src="./js/main.js"></script>
+    <meta
+      name="description"
+      content="Portfólio completo de social media com serviços, cases, resultados e contato."
+    />
+    <title>Portfólio Social Media | Ana Souza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
-    <button type="button" onclick="botao()">click aqui</button>
-    <h3 id="agd"></h3>
-    <p onclick="redirecionar()">link</p>
-    <p onmouseover="mouse(this)" onmouseout="voltar(this)">
-      passe o mouse aqui
-    </p>
-    <p onmouseover="mouse(this)" onmouseout="voltar(this)">
-      passe o mouse aqui
-    </p>
+    <header class="header" id="topo">
+      <div class="container nav-wrapper">
+        <a href="#topo" class="logo">Ana<span>Social</span></a>
+
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+          ☰
+        </button>
+
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#cases">Cases</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato" class="btn btn-small">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="tag">Social Media Strategist</p>
+            <h1>
+              Portfólio completo para marcas que querem crescer no digital com
+              estratégia e resultado.
+            </h1>
+            <p class="subtitle">
+              Planejamento, conteúdo, gestão e análise para transformar redes
+              sociais em canal de vendas e posicionamento.
+            </p>
+            <div class="hero-actions">
+              <a href="#contato" class="btn">Solicitar proposta</a>
+              <a href="#cases" class="btn btn-ghost">Ver cases</a>
+            </div>
+          </div>
+          <aside class="hero-card">
+            <h2>Resultados em 2025</h2>
+            <ul>
+              <li><strong>+220%</strong> crescimento médio de alcance orgânico.</li>
+              <li><strong>+145%</strong> aumento médio de engajamento.</li>
+              <li><strong>38</strong> marcas atendidas em 9 nichos diferentes.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="sobre">
+        <div class="container two-col">
+          <article>
+            <h2>Sobre mim</h2>
+            <p>
+              Sou Ana Souza, especialista em social media com foco em estratégia
+              de conteúdo, identidade digital e performance orgânica. Atuo há 6
+              anos no mercado ajudando empresas locais, e-commerces e
+              profissionais liberais a construírem presença forte no Instagram,
+              TikTok e LinkedIn.
+            </p>
+            <p>
+              Minha metodologia combina análise de dados, tendências e uma
+              produção criativa orientada por objetivos de negócio.
+            </p>
+          </article>
+          <article class="skills">
+            <h3>Competências</h3>
+            <div class="chips">
+              <span>Planejamento Editorial</span>
+              <span>Copywriting</span>
+              <span>Design para Feed</span>
+              <span>Roteiro para Reels</span>
+              <span>Community Management</span>
+              <span>Social Ads</span>
+              <span>Métricas e Relatórios</span>
+              <span>Funil de Conteúdo</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt" id="servicos">
+        <div class="container">
+          <h2>Serviços</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Diagnóstico e Estratégia</h3>
+              <p>
+                Auditoria completa de perfil, estudo de concorrentes, definição
+                de persona e plano editorial mensal.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Produção de Conteúdo</h3>
+              <p>
+                Criação de calendário, copies persuasivas, roteiros de vídeo,
+                direção criativa e peças para feed/stories.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Gestão de Comunidade</h3>
+              <p>
+                Atendimento de comentários e direct, gestão de crises,
+                fortalecimento de relacionamento e reputação.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Gestão de Tráfego Pago</h3>
+              <p>
+                Campanhas para reconhecimento, engajamento e conversão com foco
+                em redução de custo por resultado.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cases">
+        <div class="container">
+          <h2>Cases de sucesso</h2>
+          <div class="cards">
+            <article class="card case">
+              <h3>Clínica BemViver</h3>
+              <p>
+                Reestruturação total de posicionamento e linha editorial.
+                Resultado: <strong>+310% de alcance</strong> e
+                <strong>+82 agendamentos</strong> em 90 dias.
+              </p>
+            </article>
+            <article class="card case">
+              <h3>Loja UrbanTrend</h3>
+              <p>
+                Estratégia de UGC + Reels de prova social.
+                Resultado: <strong>ROAS 5,2</strong> e
+                <strong>+180% de visitas no site</strong>.
+              </p>
+            </article>
+            <article class="card case">
+              <h3>Mentoria ProCarreira</h3>
+              <p>
+                Posicionamento no LinkedIn com conteúdo autoridade.
+                Resultado: <strong>+12 mil seguidores qualificados</strong> e
+                <strong>3 turmas lotadas</strong>.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="depoimentos">
+        <div class="container">
+          <h2>Depoimentos</h2>
+          <div class="cards testimonials">
+            <blockquote class="card">
+              “Nossa marca finalmente ficou coerente. Hoje temos conteúdo com
+              consistência e vendas semanais vindas do Instagram.”
+              <cite>— Camila, CEO de e-commerce</cite>
+            </blockquote>
+            <blockquote class="card">
+              “A Ana entendeu nosso público rapidamente e melhorou o
+              engajamento logo no primeiro mês.”
+              <cite>— Dr. Rafael, clínica médica</cite>
+            </blockquote>
+            <blockquote class="card">
+              “O planejamento dela trouxe clareza para toda a equipe e o
+              conteúdo passou a gerar leads reais.”
+              <cite>— Juliana, infoprodutora</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pacotes">
+        <div class="container">
+          <h2>Pacotes</h2>
+          <div class="cards prices">
+            <article class="card">
+              <h3>Start</h3>
+              <p class="price">R$ 1.290/mês</p>
+              <ul>
+                <li>12 posts mensais</li>
+                <li>Calendário editorial</li>
+                <li>Relatório mensal</li>
+              </ul>
+            </article>
+            <article class="card featured">
+              <p class="badge">Mais escolhido</p>
+              <h3>Growth</h3>
+              <p class="price">R$ 2.490/mês</p>
+              <ul>
+                <li>20 posts + 8 reels</li>
+                <li>Gestão de comunidade</li>
+                <li>Reunião quinzenal</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Premium</h3>
+              <p class="price">R$ 3.990/mês</p>
+              <ul>
+                <li>Estratégia completa + anúncios</li>
+                <li>Conteúdo multiplataforma</li>
+                <li>Dashboard semanal</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="contato">
+        <div class="container two-col">
+          <article>
+            <h2>Vamos conversar?</h2>
+            <p>
+              Preencha o formulário para receber uma proposta personalizada em
+              até 24 horas úteis.
+            </p>
+            <ul class="contact-list">
+              <li><strong>E-mail:</strong> contato@anasocial.com</li>
+              <li><strong>WhatsApp:</strong> (11) 99999-9999</li>
+              <li><strong>Instagram:</strong> @anasocial.media</li>
+            </ul>
+          </article>
+          <form id="lead-form" class="contact-form" novalidate>
+            <label>
+              Nome
+              <input type="text" name="nome" required minlength="2" />
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Tipo de negócio
+              <input type="text" name="negocio" required />
+            </label>
+            <label>
+              Objetivo principal
+              <textarea name="objetivo" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn">Enviar</button>
+            <p id="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Ana Social Media. Todos os direitos reservados.</p>
+        <a href="#topo">Voltar ao topo ↑</a>
+      </div>
+    </footer>
   </body>
 </html>
