@@ -1,92 +1,42 @@
-let nome = 'alexandre';
+const menuButton = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+const navLinks = document.querySelectorAll('.nav a');
+const form = document.querySelector('#lead-form');
+const message = document.querySelector('#form-message');
+const yearSpan = document.querySelector('#year');
 
-//alert('ola' + nome);
-console.log('ola, mundo');
-
-let lista = ['maça', 'laranja', 'manga'];
-//push adiciona item no array
-lista.push('uva');
-lista.push('caja');
-lista.push('caju');
-
-console.log(lista);
-
-//let fruta = { nome: 'maca', cor: 'vermelho' };
-//console.log(fruta);
-
-let fruta = [
-  { nome: 'maca', cor: 'vermelho' },
-  { nome: 'uva', cor: 'roxo' },
-];
-console.log(fruta);
-
-//condicionais
-
-//let idade = prompt('qual a sua idade');
-//let idade = 18;
-
-/* if (idade >= 18) {
-  alert('maior de idade');
-} else {
-  alert('menor de idade');
-} */
-
-/*let count = 0;
-while (count < 5) {
-  console.log(count);
-  count = count + 1;
-} */
-/*
-var count;
-for (count = 0; count < 5; count++) {
-  console.log(count);
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
 }
 
-let d = new Date();
-console.log(d);
-
-function soma(n1, n2) {
-  return n1 + n2;
+if (menuButton && nav) {
+  menuButton.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    menuButton.setAttribute('aria-expanded', String(open));
+  });
 }
 
-console.log(soma(2, 3));
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    nav?.classList.remove('is-open');
+    menuButton?.setAttribute('aria-expanded', 'false');
+  });
+});
 
-function valida(idade) {
-  if (idade >= 18) {
-    console.log('maior idade');
-  } else {
-    console.log('menor idade');
-    return valida;
-  }
-}
-*/
-/* let idade = prompt('qual a sua idade');
-console.log(valida(idade));
-*/
+if (form && message) {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-/*function botao() {
-  alert('obrigado');
-}
-*/
+    if (!form.checkValidity()) {
+      message.textContent = 'Revise os campos obrigatórios antes de enviar.';
+      message.style.color = '#ff9b9b';
+      return;
+    }
 
-function botao() {
-  document.getElementById('agd').innerHTML = 'obrigado por clicar';
-}
+    const nome = form.elements.namedItem('nome')?.value?.trim();
 
-function redirecionar() {
-  window.open(
-    'https://developer.mozilla.org/pt-BR/docs/Web/API/Element/innerHTML'
-  );
-}
-
-function mouse(elemento) {
-  elemento.innerHTML = 'obrigado por passar o mouse.';
-  //document.getElementById('onmouseover').innerHTML =
-  // 'obrigado por passar o mouse.';
-  // alert('obrigado');
-}
-
-function voltar(elemento) {
-  elemento.innerHTML = 'passe o mouse aqui.';
-  // document.getElementById('onmouseover').innerHTML = 'passe o mouse aqui.';
+    message.textContent = `Obrigada, ${nome || 'pessoa empreendedora'}! Recebi seu pedido e retorno em breve.`;
+    message.style.color = '#2ed3b7';
+    form.reset();
+  });
 }
